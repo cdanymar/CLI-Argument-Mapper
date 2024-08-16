@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{BE6F14C9-FE6D-4ED0-9B46-FA39872294C2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Arguments</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <ScanSourceForModuleDependencies>true</ScanSourceForModuleDependencies>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(ProjectDir)include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="modules\cli.ixx" />
+    <ClCompile Include="src\cli.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\parse.tpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="docs\Doxyfile" />
+    <Content Include="docs\html\annotated.html" />
+    <Content Include="docs\html\bc_s.png" />
+    <Content Include="docs\html\bc_sd.png" />
+    <Content Include="docs\html\classes.html" />
+    <Content Include="docs\html\clipboard.js" />
+    <Content Include="docs\html\closed.png" />
+    <Content Include="docs\html\cookie.js" />
+    <Content Include="docs\html\d4\d61\cli_8cxx.html" />
+    <Content Include="docs\html\d5\dfa\namespacecli.html" />
+    <Content Include="docs\html\d7\d2d\classcli_1_1args.html" />
+    <Content Include="docs\html\da\d25\module__cli.html" />
+    <Content Include="docs\html\db\d8b\classcli_1_1args-members.html" />
+    <Content Include="docs\html\db\d90\cli_8ixx.html" />
+    <Content Include="docs\html\dir_68267d1309a1af8e8297ef4c3efbcdba.html" />
+    <Content Include="docs\html\dir_cfafba98a580ce4b62f8a6fa96d7cbb0.html" />
+    <Content Include="docs\html\dir_df13f81552cd0a5941bf389c0060925a.html" />
+    <Content Include="docs\html\dir_e05d7e2b1ecd646af5bb94391405f3b5.html" />
+    <Content Include="docs\html\doc.svg" />
+    <Content Include="docs\html\docd.svg" />
+    <Content Include="docs\html\doxygen.css" />
+    <Content Include="docs\html\doxygen.svg" />
+    <Content Include="docs\html\doxygen_crawl.html" />
+    <Content Include="docs\html\dynsections.js" />
+    <Content Include="docs\html\files.html" />
+    <Content Include="docs\html\folderclosed.svg" />
+    <Content Include="docs\html\folderclosedd.svg" />
+    <Content Include="docs\html\folderopen.svg" />
+    <Content Include="docs\html\folderopend.svg" />
+    <Content Include="docs\html\functions.html" />
+    <Content Include="docs\html\functions_func.html" />
+    <Content Include="docs\html\globals.html" />
+    <Content Include="docs\html\globals_func.html" />
+    <Content Include="docs\html\index.html" />
+    <Content Include="docs\html\jquery.js" />
+    <Content Include="docs\html\menu.js" />
+    <Content Include="docs\html\menudata.js" />
+    <Content Include="docs\html\minus.svg" />
+    <Content Include="docs\html\minusd.svg" />
+    <Content Include="docs\html\modulemembers.html" />
+    <Content Include="docs\html\modulemembers_func.html" />
+    <Content Include="docs\html\modules.html" />
+    <Content Include="docs\html\namespaces.html" />
+    <Content Include="docs\html\navtree.css" />
+    <Content Include="docs\html\nav_f.png" />
+    <Content Include="docs\html\nav_fd.png" />
+    <Content Include="docs\html\nav_g.png" />
+    <Content Include="docs\html\nav_h.png" />
+    <Content Include="docs\html\nav_hd.png" />
+    <Content Include="docs\html\open.png" />
+    <Content Include="docs\html\plus.svg" />
+    <Content Include="docs\html\plusd.svg" />
+    <Content Include="docs\html\resize.js" />
+    <Content Include="docs\html\search\all_0.js" />
+    <Content Include="docs\html\search\all_1.js" />
+    <Content Include="docs\html\search\all_2.js" />
+    <Content Include="docs\html\search\all_3.js" />
+    <Content Include="docs\html\search\all_4.js" />
+    <Content Include="docs\html\search\all_5.js" />
+    <Content Include="docs\html\search\classes_0.js" />
+    <Content Include="docs\html\search\close.svg" />
+    <Content Include="docs\html\search\files_0.js" />
+    <Content Include="docs\html\search\functions_0.js" />
+    <Content Include="docs\html\search\functions_1.js" />
+    <Content Include="docs\html\search\functions_2.js" />
+    <Content Include="docs\html\search\mag.svg" />
+    <Content Include="docs\html\search\mag_d.svg" />
+    <Content Include="docs\html\search\mag_sel.svg" />
+    <Content Include="docs\html\search\mag_seld.svg" />
+    <Content Include="docs\html\search\modules_0.js" />
+    <Content Include="docs\html\search\namespaces_0.js" />
+    <Content Include="docs\html\search\pages_0.js" />
+    <Content Include="docs\html\search\search.css" />
+    <Content Include="docs\html\search\search.js" />
+    <Content Include="docs\html\search\searchdata.js" />
+    <Content Include="docs\html\splitbar.png" />
+    <Content Include="docs\html\splitbard.png" />
+    <Content Include="docs\html\sync_off.png" />
+    <Content Include="docs\html\sync_on.png" />
+    <Content Include="docs\html\tabs.css" />
+    <Content Include="docs\html\tab_a.png" />
+    <Content Include="docs\html\tab_ad.png" />
+    <Content Include="docs\html\tab_b.png" />
+    <Content Include="docs\html\tab_bd.png" />
+    <Content Include="docs\html\tab_h.png" />
+    <Content Include="docs\html\tab_hd.png" />
+    <Content Include="docs\html\tab_s.png" />
+    <Content Include="docs\html\tab_sd.png" />
+    <Content Include="docs\latex\annotated.tex" />
+    <Content Include="docs\latex\d4\d61\cli_8cxx.tex" />
+    <Content Include="docs\latex\d5\dfa\namespacecli.tex" />
+    <Content Include="docs\latex\d7\d2d\classcli_1_1args.tex" />
+    <Content Include="docs\latex\da\d25\module__cli.tex" />
+    <Content Include="docs\latex\db\d90\cli_8ixx.tex" />
+    <Content Include="docs\latex\doxygen.sty" />
+    <Content Include="docs\latex\etoc_doxygen.sty" />
+    <Content Include="docs\latex\files.tex" />
+    <Content Include="docs\latex\index.tex" />
+    <Content Include="docs\latex\longtable_doxygen.sty" />
+    <Content Include="docs\latex\make.bat" />
+    <Content Include="docs\latex\Makefile" />
+    <Content Include="docs\latex\modules.tex" />
+    <Content Include="docs\latex\namespaces.tex" />
+    <Content Include="docs\latex\refman.tex" />
+    <Content Include="docs\latex\tabu_doxygen.sty" />
+    <Content Include="LICENSE" />
+    <Content Include="readme.md" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

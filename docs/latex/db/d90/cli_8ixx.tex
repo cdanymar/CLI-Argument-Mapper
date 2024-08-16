@@ -1,0 +1,109 @@
+\doxysection{D\+:/\+Rider\+Projects/\+CLI Argument Mapper/\+Arguments/modules/cli.ixx File Reference}
+\hypertarget{cli_8ixx}{}\label{cli_8ixx}\index{D:/RiderProjects/CLI Argument Mapper/Arguments/modules/cli.ixx@{D:/RiderProjects/CLI Argument Mapper/Arguments/modules/cli.ixx}}
+
+
+Command line arguments parsing tools.  
+
+
+{\ttfamily import std;}\newline
+{\ttfamily import $<$cstdlib$>$;}\newline
+{\ttfamily import "{}parse.\+tpp"{};}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcli_1_1args}{cli\+::args}}
+\begin{DoxyCompactList}\small\item\em Container with the parsing tools for the command line arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacecli}{cli}}
+\begin{DoxyCompactList}\small\item\em Command line arguments parsing tools. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacecli_a169cc113f221db20ae043db2a626348f}\label{namespacecli_a169cc113f221db20ae043db2a626348f} 
+class cli\+::args {\bfseries cli\+::args} (\+\_\+\+\_\+argc -\/ 1, \+\_\+\+\_\+argv+1)
+\item 
+\Hypertarget{cli_8ixx_a9caccb5f887987d11e0aabc69a6f22c7}\label{cli_8ixx_a9caccb5f887987d11e0aabc69a6f22c7} 
+{\bfseries args} (std\+::initializer\+\_\+list$<$ std\+::string $>$)
+\begin{DoxyCompactList}\small\item\em Initializes CLI arguments. \end{DoxyCompactList}\item 
+\Hypertarget{cli_8ixx_a7a806b1966238f811ed3d009c4ffc140}\label{cli_8ixx_a7a806b1966238f811ed3d009c4ffc140} 
+{\bfseries args} (const std\+::vector$<$ std\+::string $>$ \&)
+\begin{DoxyCompactList}\small\item\em Initializes CLI arguments. \end{DoxyCompactList}\item 
+\Hypertarget{cli_8ixx_a117abc9538c6b624a0c70d4b92a29e5a}\label{cli_8ixx_a117abc9538c6b624a0c70d4b92a29e5a} 
+{\bfseries args} (int, const char \texorpdfstring{$\ast$}{*}const\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Initializes CLI arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args, typename T $>$ }\\auto \mbox{\hyperlink{cli_8ixx_af3b16714fe06bef9762233ee06b0ccd5}{on}} (const std\+::string\+\_\+view option, T(\texorpdfstring{$\ast$}{*}function)(Args...)) -\/$>$ \mbox{\hyperlink{cli_8ixx_a9caccb5f887987d11e0aabc69a6f22c7}{args}} \&
+\begin{DoxyCompactList}\small\item\em Maps verbatim option to the first argument. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args, typename Lambda $>$ }\\auto \mbox{\hyperlink{cli_8ixx_a217d6ba8bafd4c3abae78c2ee8e9b8b9}{on}} (const std\+::string\+\_\+view option, Lambda lambda) -\/$>$ \mbox{\hyperlink{cli_8ixx_a9caccb5f887987d11e0aabc69a6f22c7}{args}} \&
+\begin{DoxyCompactList}\small\item\em Maps verbatim option to the first argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Command line arguments parsing tools. 
+
+\begin{DoxyAuthor}{Author}
+Danylo Marchenko (cdanymar) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/08-\/14 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{cli_8ixx_a217d6ba8bafd4c3abae78c2ee8e9b8b9}\index{cli.ixx@{cli.ixx}!on@{on}}
+\index{on@{on}!cli.ixx@{cli.ixx}}
+\doxysubsubsection{\texorpdfstring{on()}{on()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{cli_8ixx_a217d6ba8bafd4c3abae78c2ee8e9b8b9} 
+template$<$typename... Args, typename Lambda $>$ \\
+auto args\+::on (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view}]{option}{, }\item[{Lambda}]{lambda}{}\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{cli_8ixx_a9caccb5f887987d11e0aabc69a6f22c7}{args}}\&         }
+
+
+
+Maps verbatim option to the first argument. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Args} & Callback function arguments. \\
+\hline
+{\em Lambda} & The callback lambda to call. Parameters types must be explicit. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em option} & The option to match. \\
+\hline
+{\em lambda} & The callback lambda to call. Parameters types must be explicit. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{cli_8ixx_af3b16714fe06bef9762233ee06b0ccd5}\index{cli.ixx@{cli.ixx}!on@{on}}
+\index{on@{on}!cli.ixx@{cli.ixx}}
+\doxysubsubsection{\texorpdfstring{on()}{on()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{cli_8ixx_af3b16714fe06bef9762233ee06b0ccd5} 
+template$<$typename... Args, typename T $>$ \\
+auto args\+::on (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view}]{option}{, }\item[{T(\texorpdfstring{$\ast$}{*}}]{function~}{)(Args...)}\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{cli_8ixx_a9caccb5f887987d11e0aabc69a6f22c7}{args}}\&         }
+
+
+
+Maps verbatim option to the first argument. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Args} & Callback function arguments. \\
+\hline
+{\em T} & Callback function return value. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em option} & The option to match. \\
+\hline
+{\em function} & The callback function to call. \\
+\hline
+\end{DoxyParams}
